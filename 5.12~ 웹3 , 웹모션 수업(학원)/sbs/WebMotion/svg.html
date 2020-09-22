@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/svg.css">
+	<title>SVG</title>
+</head>
+<body>
+
+	<section>
+		<h1>SVG</h1>
+		<svg></svg>	
+	</section>
+
+	<section>
+		<h2>RECT</h2>
+		<svg>
+			<rect class="r1" x="50" y="100" ry="40" />
+			<rect class="r2" x="350" y="100" rx="40" />
+			<!-- cx = 원형의 중심점의 x축 좌표, cy "" y축 좌표 , r은 원형의 반지름 -->
+			<!-- 센터x, 센터y 이런식으로 기억하면 편함. -->
+			<!-- Default 검정색 -->
+			<!-- rx : 사각형의 모서리 라운드의 x 축 반지름 -->
+			<!-- ry : "" 				     y 축    "" -->
+		</svg>	
+	</section>
+
+	<section>
+		<h1>CIRCLE</h1>
+		<svg>
+			<circle class="c1" r="100" cx="300" cy="200"/>
+			<!-- rx,ry가 비례해서 커짐 정원이므로 -->
+		</svg>	
+	</section>
+			<!-- 사각형은 X축이 0,0 기준으로 왼쪽 모서리 기준이지만, 원형은 0,0이 원형중심점 기준이다  -->
+	<section>
+		<h1>ELLIPSE</h1>
+		<svg class="ellipse">
+			<ellipse class="e1" rx="200" ry="100" cx="300" cy="200"/>
+			<ellipse class="e2" rx="100" ry="150" cx="300" cy="200"/>
+			<ellipse class="e3" rx="80" ry="80" cx="300" cy="200"/>
+			<!-- 제일 밑에 마크업된애가 위에올라옴 (위에서부터 순차적으로 실행되므로 마지막에 실행된애가 제일밑에니깐 제일위에 나옴.) -->
+			<!-- rx,ry가 반비례해서 커짐 정원이 아니므로, rx / ry 값이 동일하면 정원 (위아래와 양옆의 지름이 같으므로) -->
+		</svg>
+	</section>
+	<section>
+		<h2>모자 쓴 얼굴</h2>
+		<svg>
+			<ellipse class="hat_red" rx="70" ry="25.5" cx="260" cy="50" />
+			<ellipse class="hat_red" rx="90" ry="82.5" cx="300" cy="100" />
+			<ellipse class="body" rx="120" ry="200" cx="300" cy="450"/>
+			<ellipse class="face" rx="100" ry="100" cx="300" cy="200"/>
+			<circle class="Eyes" r="7" cx="220" cy="185"/>
+			<circle class="Eyes" r="7" cx="380" cy="185"/>
+			<ellipse class="mustache" rx="20" ry="25" cx="320" cy="230" transform = "rotate (325, 320, 230)"/>
+			<ellipse class="mustache" rx="20" ry="25" cx="280" cy="230" transform = "rotate (35, 280, 230)"/>
+			<circle class="nose" r="15" cx="300" cy="205"/>
+            <line x1="275" y1="215" x2="255" y2="200" stroke-width="1" stroke="black" />
+            <line x1="270" y1="225" x2="250" y2="225" stroke-width="1" stroke="black" />
+            <line x1="270" y1="235" x2="250" y2="250" stroke-width="1" stroke="black" />
+            <line x1="325" y1="215" x2="345" y2="200" stroke-width="1" stroke="black" />
+            <line x1="330" y1="225" x2="350" y2="225" stroke-width="1" stroke="black" />
+            <line x1="330" y1="235" x2="350" y2="250" stroke-width="1" stroke="black" />
+            <ellipse class="hat" rx="25" ry="27.5" cx="225" cy="123" />
+            <ellipse class="hat" rx="25" ry="27.5" cx="255" cy="123" />
+            <ellipse class="hat" rx="25" ry="27.5" cx="285" cy="123" />
+            <ellipse class="hat" rx="25" ry="27.5" cx="315" cy="123" />
+            <ellipse class="hat" rx="25" ry="27.5" cx="345" cy="123" />
+            <ellipse class="hat" rx="25" ry="27.5" cx="375" cy="123" />
+            <circle class="hat_circle" r="20" cx="180" cy="50" style="fill: white" stroke="3"/>
+            <!-- <polyline
+   			points="270,130 330,130 300,50 270,130" 
+   			fill="red" stroke="black" stroke-width="3" /> -->
+   			<!-- <polyline
+   			points="272.5,127.5 321.5,110 317.5,100 277.5,115" 
+   			fill="yellow" />
+   			<polyline
+   			points="285,95 310,80 306,70 290,80" 
+   			fill="yellow"/ -->>
+		</svg>	
+	</section>
+
+	<section>
+		<h2>line</h2>
+		<svg>
+			<line class="n1" x1="100" y1="100" x2="500" y2="300" stroke-width="1" stroke="orange"/>
+			<line class="n2" x1="100" y1="300" x2="500" y2="100" stroke-width="3" stroke="cornflowerblue"/>
+			<!-- 과제 : n1 과 대칭인 새로운 다른색상의 line 추가 -->
+		</svg>	
+	</section>
+
+	<section>
+		<h2>Polyline</h2>
+		<svg>
+			<polygon class="p1" points="50,50 50,350 250,350" fill="" stroke-width="3" />
+			<polyline class="p1" points="350,50 350,350 550,350" fill="" stroke-width="3" />
+		</svg>	
+	</section>
+
+	<section>
+		<h2>Polygon</h2>
+		<svg>
+			<!-- 과제 : pdf 5page 첫번째 html 1번 2번 polygon 그려오기 -->
+			<polygon points="100,125 175,275 25,275" fill="cornflowerblue"/>
+			<polygon points="300,100 375,185 300,275 225,180" fill="bisque"/>
+			<polygon points="500,125 456,275 575,190 425,190 544,275" fill="lime"/>
+		</svg>	
+	</section>
+
+	<section>
+		<h2>Polyline</h2>
+		<svg>
+			<polyline Points="100,100 100,200 200,200 200,300 300,300" fill="limegreen"/>
+			<polyline Points="500,100 500,200 400,200 400,300 300,300" fill="red"/>
+		</svg>
+	</section>
+
+	<section>
+		<h2>직선</h2>
+			<svg>
+				<path class="p1" d="M300,50 L550,350 L50,350 Z"/>
+				<path class="p2" d="M50,50 L550,50 L300,350 Z"/>
+			</svg>
+			 <!-- svg(0,0) => svg에서 절대좌표 -->
+			 <!-- M: 움직임의 시작점, L은 직선그리기 Z은 패스닫기 -->
+			 <!--  M = moveto (이동)
+			 L = lineto (라인) 직선
+		 	 H = horizontal lineto (수평 라인) 수직선
+			 V = vertical lineto (수직 라인) 수평선
+			 C = curveto (곡선) 곡선
+			 S = smooth curveto (부드러운 곡선)
+			 Q = quadratic Bézier curveto (2 차의 베지어 곡선)
+		 	 T = smooth quadratic Bézier curveto (부드러운 2 차의 베지어 곡선)
+			 A = elliptical Arc (둥근 모양)
+			 Z = closepath (닫힌 패스) -->
+	</section>
+
+	<section>
+		<h2>곡선1</h2>
+			<svg>
+				<!-- C : 핸들러 -->
+				<!-- M x,y(시작점) // C x1,y1 x2,y2 ... x,y(좌표 끝점) -->
+				<path class="p1" d="M10,10 C20,20 40,20 50,10"/>
+				<path class="p1" d="M70,10 C70,20 120,20 120,10"/>
+				<path class="p1" d="M130,10 C120,20 180,20 170,10"/>
+				<!-- 나머지 6개 path 그려오기 -->
+				<path class="p1" d="M10,60 C20,80 40,80 50,60"/>
+				<path class="p1" d="M70,60 C70,80 110,80 110,60"/>
+				<path class="p1" d="M130,60 C120,80 180,80 170,60"/>
+				<path class="p1" d="M10,110 C20,140 40,140 50,110"/>
+				<path class="p1" d="M70,110 C70,140 110,140 110,110"/>
+				<path class="p1" d="M130,110 C120,140 180,140 170,110"/>
+			</svg>
+	</section>
+
+	<section>
+		<h2>곡선2</h2>
+			<svg>
+				<line class="handler" x1="50" y1="100" x2="100" y2="350"/>
+				<line class="handler" x1="550" y1="100" x2="500" y2="350"/>
+				<path class="p2" d="M50,100 C100,400 500,400 550,100"/>
+			</svg>
+	</section>
+
+	<section>
+		<h2>곡선3</h2>
+			<svg>
+				<line class="handler" x1="50" y1="200" x2="100" y2="50"/>
+				<line class="handler" x1="300" y1="200" x2="250" y2="50"/>
+				<line class="handler" x1="550" y1="200" x2="500" y2="350"/>
+				<line class="handler" x1="300" y1="200" x2="350" y2="350"/>
+				<path class="p2" d="M50,200 C100,50 250,50 300,200 S500,350 550,200"/>
+			</svg>
+	</section>
+
+	<section>
+		<h2>파도와 물고기</h2>
+		<svg>
+			<!-- 과제 : 곡선과 직선, 도형을 이용해 파도와 물고기를 예쁘게 그려오세요 -->
+			<path class="pado" d="M0,50 C20,25 40,25 60,50 S125,150 200,50 C220,25 240,25 260,50 S325,150, 400,50 C420,25 440,25 460,50 S525,150 600,50 L600,400 0,400 Z "/>
+			<path class="pado2" d="M0,80 C20,55 40,65 60,80 S125,180 200,80 C220,55 240,55 260,80 S325,180, 400,80 C420,60 440,45 460,80 S525,180 600,80 L600,400 0,400 Z "/>
+			<path class="pado3" d="M0,120 C20,75 40,85 60,120 S125,220 200,130 C220,105 240,95 260,120 S325,220, 400,120 C420,95 440,85 460,120 S525,240 600,120 L600,400 0,400 Z "/>
+			<polygon class="tale" points="250,250 225,225 225,275" fill="white"/>
+			<ellipse class="fish" rx="100" ry="50" cx="350" cy="250" fill="lime" />
+			<line class="fish_eyes" x1="420" y1="260" x2="440" y2="270"/>
+			<path class="fish_eyes" d="M400,250 C410,220 420,220 430,250"></path>
+		</svg>
+	</section>
+
+	<section>
+		<h2>곡선4</h2>
+		<svg>
+			<line class="handler" x1="50" y1="200" x2="175" y2="-50"/>
+			<line class="handler" x1="300" y1="200" x2="175" y2="-50"/>
+			<path class="p2" d="M50,200 Q175,-50 300,200 T550,200"/>
+		</svg>
+	</section>
+
+	<section>
+		<h2>곡선5</h2>
+		<svg>
+		<line class="handler" x1="100" y1="0" x2="100" y2="400"/>
+		<line class="handler" x1="500" y1="0" x2="500" y2="400"/>
+		<line class="handler" x1="0" y1="200" x2="600" y2="200"/>
+		<circle class="handler" r="250" cx="300" cy="50" fill="none"/>
+		<path class="p2" d="M100,200 A250,250 0,0,0 500,200" fill="none"/>
+		<!-- 0, 0, 0 => rotate(deg),0or1 스몰,라지,0or1 반시계,시계 -->
+		</svg>
+	</section>
+
+	<h2>곡선6</h2>
+		<svg>
+			<line class="handler" x1="100" y1="0" x2="100" y2="400"/>
+			<line class="handler" x1="300" y1="0" x2="300" y2="400"/>
+			<line class="handler" x1="0" y1="100" x2="600" y2="100"/>
+			<ellipse class="handler" rx="100" ry="250" cx="200" cy="100" fill="none"/>
+			<path class="p2" d="M100,100 A100,250 45,0,0 300,100" fill="none"/>
+			<path class="p1" d="M100,100 A100,250 45,1,0 300,100" fill="none"/>
+			<path class="p3" d="M100,100 A100,250 45,0,1 300,100" fill="none"/>
+			<!-- 0, 0, 0 => rotate(deg),0or1 스몰,라지,0or1 반시계,시계 -->
+		</svg>		
+	</section>
+
+	<section>
+	<h2>하트1</h2>
+		<svg>
+			<line class="handler" x1="0" y1="30" x2="600" y2="30"/>
+			<line class="handler" x1="0" y1="60" x2="600" y2="60"/>
+			<line class="handler" x1="10" y1="0" x2="10" y2="400"/>
+			<line class="handler" x1="90" y1="0" x2="90" y2="400"/>
+			<path class="p2" d="M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30" fill="none"/>
+			<!-- 크고 예쁜 하트 그려오기 -->
+			<!-- A는 상대좌표 A20 은 = M10+20 = 30 -->
+		</svg>		
+	</section>
+
+	<section>
+	<h2>하트 그려오기</h2>
+		<svg>
+			<use class="fill_h" xlink:href="#heart" x="100" transform="rotate (310, 360, 250) scale(0.5, 0.5)" fill="blue"/>
+			<path d="M140,150 A80,100 0,0,1 300,150 A80,100 0,0,1 460,150 Q460,240 300,320 Q140,240 140,150 Z" id="heart"/>
+			<!-- 크고 예쁜 하트 그려오기 -->
+			<!-- a가 001이니깐 y축기준 시계방향으로 100만큼 멀어진거 -->
+			<!-- A는 상대좌표 A20 은 = M10+20 = 30 0,0,1 이면 시계방향으로 x값 + y값 + -->
+		</svg>		
+	</section>
+
+	<section>
+		<h2>set</h2>
+		<svg>
+			<circle cx="50" cy="50" r="50">
+				<set attributeName="cx" attributeType="xml" to="300" begin="3s" />
+				<set attributeName="cy" attributeType="xml" to="300" begin="3s" />
+				<set attributeName="fill" attributeType="xml" to="gold" begin="3s" />
+			</circle>
+		</svg>	
+	</section>
+
+	<section>
+		<h2>animate</h2>
+		<svg>
+			<circle cx="50" cy="50" r="50">
+				<animate attributeName="cx" attributeType="xml" to="400" dur="1s" fill="freeze" />
+				<animate attributeName="fill" attributeType="xml" to="orange" dur="1s" repeatCount="indefinite"  />
+			</circle>
+		</svg>	
+	</section>
+		
+	<section>
+		<h2>animateTransform</h2>
+		<!-- from="rotate,x,y"-->
+		<svg>
+			<rect class="rect2" x="180" y="50">
+				<animateTransform attributeName="transform" type="rotate" dur="1s" from="0 300 200" to="360 300 200" repeatCount="indefinite" />
+			</rect>
+		</svg>
+	</section>
+
+	<section>
+		<h2>animateMotion</h2>
+		<!-- from="rotate,x,y"-->
+		<svg>
+			<rect class="rect2" x="0" y="0">
+				<animateMotion path="M50,200 C100,50 250,50 300,200 S500,350 550,200" dur="5s" repeatCount="indefinite" rotate="auto" />
+			</rect>
+			<path class="p2" d="M50,200 C100,50 250,50 300,200 S500,350 550,200" />
+		</svg>
+	</section>
+
+	<section>
+       <h2>use</h2>
+        <svg>
+            <circle id="mycircle" r="50" cx="100" cy="200" fill="red" />
+            <use class="r1" xlink:href="#mycircle" x="50" />
+            <use class="e2" xlink:href="#mycircle" y="-120" x="200" />
+            <!-- 상대경로 참조한 hreft값의 상대적인 위치로 클론이 됨 -->
+        </svg>
+    </section>
+
+    <section>
+       <h2>g</h2>
+        <svg>
+            <g id="mygroup">
+                <rect width="100" height="100" x="50" y="100" />
+                <circle r="50" cx="150" cy="200" />
+            </g>
+            <use class="p1" xlink:href="#mygroup" x="100" y="50" />
+            <use class="r1" xlink:href="#mygroup" x="250" y="-50" />
+        </svg>
+    </section>
+
+    <section>
+       <h2>symbol</h2>
+        <svg>
+            <symbol id="mysymbol">
+                <rect width="100" height="100" x="50" y="100" />
+                <circle r="50" cx="150" cy="200" />
+            </symbol>
+            <use class="p1" xlink:href="#mysymbol" x="100" y="50" />
+            <use class="r1" xlink:href="#mysymbol" x="250" y="-50" />
+        </svg>
+		 <!-- <symbol> 엘리먼트는 <g> 엘리먼트와 비슷해 보이지만 그룹핑 된 엘리먼트를 하나의 심볼로
+		정의하여 재활용 할 때 사용되며 <symbol> 엘리먼트로 정의된 엘리먼트는 <use> 엘리먼트 없이
+		스스로 표시될 수 없다. -->
+    </section>
+
+    <section>
+       <h2>viewbox</h2>
+        <!--x y width height-->
+        <svg viewbox="0 0 300,200">
+        	<!-- 600 400 이였을때 200 200 -->
+        	<!-- 300 200의 화면에서 200 200이나온다면, -->
+        	<!-- 600 400이게 200 200 짜리는 화면의 각 1/3 1/2을차지 , 이게 300 200에서 볼때 200 200은 화면의 2/3과 1의 비율을 차지한다. 이걸 실제크기인 600 400에 대조하면 400에 400의 크기가 되야 비율이 맞는거기때문에 viewbox 0 0 300 200으로 , 200 200 짜리 도형을보면 실제화면인 600 400에서 400 400짜리 도형을 보는것과 같으므로 실제크기가
+        	400,400으로 나타나게된다 그럼 1200,400에서 200 200을보면 비율은 1/6과 1/2 그럼 실제크기로는 100,100 으로 보인다.  -->
+        	<!--  min-x, min-y, width, height -->
+            <rect class="r2"/>
+            <!-- width 와 height 는 출력할 viewBox 의 사이즈이다
+            지금이와같은경우 300x200의 화면을 200x200에 출력한다. -->
+        </svg>
+    </section>
+
+    <!-- 아이콘 -->
+    
+    <!-- 청정원이미지 -->
+
+
+</body>
+</html>

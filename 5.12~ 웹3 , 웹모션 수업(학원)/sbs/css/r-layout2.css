@@ -1,0 +1,56 @@
+@charset "utf-8";
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body { font-family: Arial,sans-serif; line-height: 1.6;}
+h1, h2 { margin: 20px 0;}
+h1 {margin-left: 20px;}
+div {padding: 20px;}
+.c1 {background: coral;}
+.c2 {background: bisque;}
+.c3 {background: cornflowerblue;}
+
+
+/*Mostly Fluid*/
+@media screen and (min-width:768px){
+    .mf .c2, .mf .c3 {
+        float: left;
+        width: 50%;
+    }
+}
+
+/*Column Drop*/
+@media screen and (min-width:768px){
+    .cd .c1, .cd .c2 {
+        float: left;
+        width: 50%;
+    }
+    .cd .c3 {
+    clear: both;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .cd .c1, .cd .c2, .cd .c3 {
+        width: 33.333%;
+    }
+    .cd .c3 {
+        float: left;
+        clear: none;
+    }
+}
+
+
+/*Layout Shift*/
+
+.wrap {
+    padding: 0;
+}
+@media screen and (min-width:768px) {
+    .Ls .c1, .wrap {
+        float: left;
+    }
+    .Ls .c1 {
+        width: 30%;
+    }
+    .wrap {width: 70%;}
+}
+    

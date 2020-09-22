@@ -1,0 +1,16 @@
+반응형
+320px 768px 1024px
+아이폰 아이폰 아이패드 사이즈
+
+img {
+     width:100%;
+     max-width:600px;
+     이미지가 반응형으로 가변으로 width값이 변하지만 600px가 되면 고정     으로 바뀐다.
+     반대로 min-width 도 존재
+}
+max-width / min-width / max-height / min-height
+
+과제
+FTP 프로그램 복습
+웹 URL 제출하는법 복습
+

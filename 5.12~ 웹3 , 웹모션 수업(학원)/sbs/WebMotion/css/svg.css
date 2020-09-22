@@ -1,0 +1,141 @@
+@charset "utf-8";
+body {
+	text-align: center;
+}
+section {
+	display: inline-block;
+	margin: 10px;
+}
+svg {
+	box-shadow: 10px 10px 0 0px #ccc;
+	width: 600px; height: 400px;
+	background: url(../img/grid.gif);
+	overflow: hidden;
+	/* 오버플로우 하는 이유 */
+	/* 크롬에선 무조건 SVG 자식태그는 무조건 SVG크기안에서 안나가는데, 익스플로러에선 svg밖으로 svg안에 있던 애들이 튀어나갈수있음*/
+	/* svg Default 값 300 150 px; */
+}
+rect {
+	width: 200px; height: 200px;
+}
+.rect2 {
+	width: 50px; height: 20px;
+}
+.r1 {
+	fill: cornflowerblue;
+	fill-opacity: 0.5; stroke-opacity: 0.51;
+	stroke: black; stroke-width: 5px;
+}
+.r2 {
+	fill: orange;
+	fill-opacity: 0.5; stroke-opacity: 0.51;
+	stroke: black; stroke-width: 5px;
+	width: 200px;
+	height: 200px;
+}
+.c1 {
+	fill: bisque;
+	fill-opacity: 0.5; stroke-opacity: 0.51;
+	stroke: black; stroke-width: 5px;
+}
+.e1 {
+	fill: thistle;
+	fill-opacity: 0.5; stroke-opacity: 0.51;
+}
+.ellipse > ellipse:nth-of-type(1) {
+	fill: limegreen;
+}
+.ellipse > ellipse:nth-of-type(2) {
+	fill: khaki;
+}
+.ellipse > ellipse:nth-of-type(3) {
+	fill: orchid;
+}
+.face {
+	fill: skyblue;
+	opacity: 1;	
+	stroke-width: 1px;
+	stroke: black;
+}
+.body {
+	fill: skyblue;
+	opacity: 1;	
+	stroke-width: 1px;
+	stroke: black;
+}
+.Eyes {
+	fill: black;
+}
+}
+.nose {
+	fill: black;
+}
+.mustache {
+	fill: white;
+	stroke: black;
+}
+.hat {
+	fill: white;
+	stroke-width: 1px;
+	stroke: black;
+}
+.hat_red {
+	fill: red;
+	stroke-width: 1px;
+	stroke: black;
+}
+.hat_circle {
+	fill: white;
+	stroke-width: 1px;
+	stroke: black;
+}
+/*일반적인 css opacity가 먹히긴하는데 stroke 와 fill 에 둘다 적용된다.*/
+.p1 {
+	fill: none;
+	stroke: orange; stroke-width: 4px;
+}
+.p2 {
+	fill: none;
+	stroke: red; stroke-width: 4px;
+}
+.p3 {
+	stroke: blue;
+}
+.handler {
+	fill: none;
+	stroke: pink; stroke-width: 2px;
+}
+.pado {
+	fill: dodgerblue;
+	stroke: black; stroke-width: 1px;
+}
+.pado2 {
+	fill: blue;
+	stroke: black; stroke-width: 1px;
+}
+.pado3 {
+	fill: skyblue;
+	stroke: black; stroke-width: 1px;
+}
+.fish_eyes {
+	fill: none;
+	stroke: black; stroke-width: 1px;
+}
+.fish {
+	stroke: black; stroke-width: 1px;
+}
+.tale {
+	stroke: black; stroke-width: 1px;
+}
+.fill1 {
+	fill: blue;
+}
+.e2 {
+	
+}
+#heart {
+	fill: hotpink;
+}
+.fill_h {
+	fill: blue;
+}

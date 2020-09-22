@@ -1,0 +1,17 @@
+@charset "uft-8";
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; }
+h1, h2 { margin: 20px 0; }
+h1 { margin-left: 20px; }
+div { padding: 20px; }
+.c1 { background: coral; }
+.c2 { background: bisque; }
+.c3 { background: cornflowerblue; }
+
+/* mostly fluid */
+@media screen and (min-width:768px) {
+	.mf .c2, .mf .c3 {
+		float: left;
+		width: 50%;
+	}
+}

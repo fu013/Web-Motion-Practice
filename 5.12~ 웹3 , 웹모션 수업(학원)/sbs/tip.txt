@@ -1,0 +1,2 @@
+앱솔루트,픽스드
+만약 부모 중에 포지션이 relative, absolute, fixed인 태그가 없다면 가장 위의 태그(body)가 기준이 됩니다.

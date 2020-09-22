@@ -1,0 +1,143 @@
+문자 인코딩 
+XHTML
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+HTML5
+<meta charset="utf-8">
+한국어 : euc-kr
+일본어 : euc-jp
+GB2312 : 중국어 문자 인코딩
+ISO-8859-1 : 북미, 서부유럽, 라틴, 아메리카, 카리브해, 캐나다, 아프리카
+ISO-8859-2 : 동유럽
+ISO-8859-3 : 남동유럽, 에스페란토
+ISO-8859-4 : 스칸디 나비아, 발트연안국
+ISO-8859-5 : 불가리아어, 벨로루 시어, 러시아어, 마케도 니아
+ISO-8859-6 : 아랍문자
+ISO-8859-7 : 현대 그리스문자 언어 뿐만 아니라 수학 기호
+ISO-8859-8 : 히브리어 문자를 사용하는 언어
+ISO-8859-9 : 터키어 
+ISO-8859-10 : 에스키모, 북유럽 언어
+모바일 뷰포트
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+<meta name="keywords" content="키워드,키워드,키워드,키워드" >
+<meta name="subject" content="문서 제목 정보">
+<meta name="description" content="요약 설명 내용">
+<meta name="author" content="작성자 정보">
+<meta name="robots" content="index,follow">
+검색엔진아 문서를 가져가고 링크도 가져가라
+index,follow
+문서는 가져가지 말고 링크가 적용된 문서만 가져가라
+noindex,follow
+문서가져가지말고, 링크된것도 가져가지마
+noindex,nofollow
+<meta name="copyright" content="저작권 정보">
+
+
+- 날짜 (제작일)
+    <meta name="Date" content="2005-02-15T07:45:37+09:00" />
+ 
+** name="date"를 사용할 때 content ‘+9:00’은 GMT(그리니치 표준시)로 부터의 시차이며 한국은 
+        ‘+09:00’ 미국동부는 ‘-05:00’(서머타임 때에는 -04:00) 이 되며 나라 / 지역에 따라 결정 됩
+         니다.
+
+ - 웹페이지에 쓰인 언어 지정
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+   
+- 브라우저 호환성
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+   
+- 홈페이지 주제
+     <meta name="Subject" content="웹표준을 공부하는 사이트" />
+ 
+- 제목
+     <meta name="Title" content="웹표준" />
+ 
+- 페이지를 작성한 제작자명
+     <meta name="Author" content="name" />
+ 
+- 제작사
+     <meta name="Publisher" content="name" />
+ 
+- 웹 책임자
+     <meta name="Other Agent" content="name" />
+ 
+- 카테고리 위치, 분류
+     <meta name="Claasification" content="" />
+ 
+- 제작 도구
+     <meta name="Generator" content="Edit Plus" />
+ 
+- 메일 주소
+     <meta name="Reply-To" content="email@email.com" />
+     <meta name="Email" content="email@email.com" />
+ 
+- 파일 이름
+     <meta name="Filename" content="index.html" />
+ 
+- 위치
+     <meta name="Location" content="위치" />
+ 
+- 배포자
+     <meta name="Distribution" content="name" />
+ 
+- 저작권
+     <meta name="Copyright" content="copyright@web address" />
+   
+- 제작 년 월 일
+     <meta name="build" content="date" />
+ 
+- 최종 수정일을 정의
+    <meta http-equiv="Last-Modified" content="Mon,20 Jul 2007 19:30:30" />
+  
+- 그림위에 마우스 오버시 이미지 관련 툴바 생기지 않음
+    <meta http-equiv="Imagetoolbar" content="no" />
+
+- 캐쉬가 되지 않게 함
+    <meta http-equiv='Cache-Control' content='no-cache' />
+    <meta http-equiv='Pragma' content='no-cache' />
+ 
+   ** 페이지를 cache에서 가져오지 않게 함. 항상 서버에 접속해서 페이지를 가져 옵니다.
+          그러므로 방문자의 브라우저가 항상 cache를 읽도록 해놓아도 이것을 무시하고 페이지를 갱신합니다.
+          자주 고치는 페이지에서는 이것을 사용하는 것이 항상 방문자에게 바뀐 내용을 보여 줄 수가 있습니다.
+          페이지 출력 속도는 매번 가져오므로 cache를 사용할 수 없어서 시간이 많이 걸립니다.
+ 
+- 캐쉬 만료 일
+    <meta http-equiv="Expires" content="Mon, 08 Sep 2003 10:10:10 GMT" />
+ 
+- 60초 마다 새로고침
+    <meta http-equiv="Refresh" content="60" />
+ 
+- 입력한 주소로 5초 후 이동
+    <meta http-equiv="Refresh" ccontent="5;url=주소"gt; />
+ 
+- 페이지 들어갈 때 장면 전환 효과
+    <meta http-equiv="Page-Enter" content="revealtrans(Duration=1,Transition=12)" />
+ 
+- 페이지 나갈 때 장면 전환 효과
+    <meta http-equiv="Page-Exit" content="revealtrans(Duration=1,Transition=12)" />
+ 
+1) 장면 전환 효과 속성값
+       Box out : 네모난 박스가 안쪽에서 바깥쪽으로 
+       Circle in : 원이 바깥에서 안쪽으로
+       Circle out : 원이 안쪽에서 바깥쪽으로
+       Wipe up : 이미지의 아래에서 위쪽으로 수직 이동
+       Wipe down : 이미지의 위에서 아래쪽으로 수직 이동
+       Wipe right : 이미지의 왼쪽에서 오른쪽으로 수평 이동
+       Wipe left : 이미지의 오른쪽에서 왼쪽으로 수평 이동
+       Vertical blinds : 수직 블라인드가 쳐지는 형태로 변환
+       Horizontal blinds : 수평 블라인드가 쳐지는 형태로 변환
+       Checkerboard across : 바둑판 형태의 격자가 왼쪽에서 오른쪽으로 생성
+       Checkerboard down : 바둑판 형태의 격자가 위에서 아래로 생성
+       Random dissove : 안개와 비슷한 형태로 변환
+       Split vertical in : 왼쪽과 오른쪽 끝에서 중앙으로 수직 이동
+       Split vertical out : 중앙에서 양쪽 끝으로 수직 이동
+       Split Horizontal in : 양쪽에서 중앙으로 수평 이동
+       Split Horizontal out : 중앙에서 양쪽끝으로 수직 이동
+       Strips left down : 대각선 형태로 오른쪽 상단에서 왼쪽 하단으로 이동
+       Strips left up : 대각선 형태로 오른쪽 하단에서 왼쪽 상단으로 이동
+       Strips right down : 대각선 형태로 왼쪽 상단에서 오른쪽 하단으로 이동
+       Strips right up : 대각선 형태로 왼쪽 하단에서 오른쪽 상단으로 이동
+       Random bars horizontal : 수평선이 무작위로 생성
+       Random bars vertical : 수직선이 무작위로 생성
+       Random : 임의로 생성

@@ -1,0 +1,53 @@
+Auto Rename tag
+오픈태그의 이름을 바꾸면 클로징태그의 이름도 같이바꿔준다.
+
+Bracket Pair Colorizer
+짝이되는 괄호끼리 색을 칠해 가독성을 높여준다.
+
+Debugger for Chrome
+크롬 디버거를 vsc로 가져오는 익스텐션
+
+Git History
+현재 작업환경에서 git을 좀 더 편하게 사용하게해줌.
+
+Hightlight Matching Tag
+매치되는 태그끼리 색을 칠해 가독성을 높여준다.
+
+IntelliSense for CSS, SCSS class names in HTML, Slim and SCSS
+css를 자동완성 시켜준다.
+
+HTML CSS Support
+위와 같은 역할
+먹통시 ctrl+space
+
+Live Server
+라이브로 페이지를 열어주고, 갱신해줌
+
+Live Share
+실시간으로 코드를 공유하여, 프로그래밍을 돕는 방식, 디버깅/협업
+사용 방법도 간단하다. 왼쪽 메뉴에 생기는 Live Share 메뉴를 클릭하고, 서버를 만든 뒤, 서버 링크를 복사하여 팀원을 초대하면 끝!
+
+Path Intellisense
+모두들 언젠가 로컬에 있는 파일을 참조해야 할 경우가 생길 것이다.
+바로 그때 로컬 파일을 빠르게, 정확하게 참조할 수 있도록 자동완성을 해주는 기능.
+
+npm Instellisense
+자매품이다. 위 확장 프로그램과 함께 설치하자.
+
+jQuery Code Snippets
+제이쿼리 자동완성.
+
+JavaScript (ES6) code snippets
+자바es6버젼이상 자동완성
+
+
+
+
+
+
+
+
+
+
+Korean Language Pack for Visual Studio Code
+vsc의 대부분을 한글화해준다.

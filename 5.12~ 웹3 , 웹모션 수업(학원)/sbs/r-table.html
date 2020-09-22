@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/r-table.css">
+	<title>responsible table</title>
+</head>
+<body>
+	<h1>반응형 테이블</h1>
+	<section>
+		<h2>table 요소 사용</h2>
+	<table>
+		<thead>
+		<tr>
+			<th scope="col">이름</th>
+			<th scope="col">성별</th>
+			<th scope="col">이름</th>
+			<th scope="col">색상</th>
+			<th scope="col">취미</th>
+		</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>홍길동</td>
+				<td>남자</td>
+				<td>웹프로그래머</td>
+				<td>검정</td>
+				<td>게임</td>
+			</tr>
+			<tr>
+				<td>김영희</td>
+				<td>여자</td>
+				<td>엡퍼블리셔</td>
+				<td>파랑</td>
+				<td>웹서핑</td>
+			</tr>
+			<tr>
+				<td>한철수</td>
+				<td>남자</td>
+				<td>웹디자이너</td>
+				<td>주황</td>
+				<td>영화감상</td>
+			</tr>
+		</tbody>
+	</table>
+	</section>
+	<section>
+		<h2>div 요소 사용</h2>
+		<!-- data- 이 붙어있는 속성은 사용자 지정속성 -->
+		<div class="table">
+			<div class="table-head">
+				<div class="cell" data-label="이름">이름</div>
+				<div class="cell" data-label="성별">성별</div>
+				<div class="cell" data-label="직종">직종</div>
+				<div class="cell" data-label="색상">색상</div>
+				<div class="cell" data-label="취미">취미</div>
+			</div>
+			<div class="row">
+				<div class="cell" data-label="이름">홍길동</div>
+				<div class="cell" data-label="성별">남자</div>
+				<div class="cell" data-label="직종">웹프로그래머</div>
+				<div class="cell" data-label="색상">걱정</div>
+				<div class="cell" data-label="취미">게임</div>
+			</div>
+			<div class="row">
+				<div class="cell" data-label="이름">김영희</div>
+				<div class="cell" data-label="성별">여자</div>
+				<div class="cell" data-label="직종">웹퍼블리셔</div>
+				<div class="cell" data-label="색상">파랑</div>
+				<div class="cell" data-label="취미">웹서핑</div>
+			</div>
+			<div class="row">
+				<div class="cell" data-label="이름">한철수</div>
+				<div class="cell" data-label="성별">남자</div>
+				<div class="cell" data-label="직종">웹디자이너</div>
+				<div class="cell" data-label="색상">주황</div>
+				<div class="cell" data-label="취미">영화감상</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,59 @@
+소문자로 적혀있지만, 예약어는 모두 대문자로 하는게 좋음
+
+데이터베이스 생성
+create database DB명; === CREATE SCHEMA DB명;
+SCHEMA === DATABASE
+
+데이터베이스 삭제
+drop database DB명;
+
+테이블 생성
+create database.table 테이블명(속성명1 속성타입, 속성명2 속성타입, .... );
+
+데이터베이스 접속(꼭 안해도 상관은 없음)
+use DB명;
+
+테이블 수정
+alter table 테이블명 add 속성명 속성타입;                                               => 속성 추가
+alter table 테이블명 drop 속성명;                                                            => 속성 삭제
+alter table 테이블명 change column 이전 속성명 새 속성명 속성타입;     => 속성 변경
+alter table 테이블명 modify column 속성명 새 속성타입;                 => 속성 타입 변경
+alter table 테이블명 rename 새 테이블명;                                         => 테이블명 변경
+
+데이터 삽입
+insert into 테이블명 values('값', '값',...);
+insert into 테이블명 (속성1, 속성2) values ('값','값');
+
+데이터 검색(WHERE 명령어를 사용하여 조건설정 가능)
+select * from 테이블명;
+select * from 테이블명 where 조건1 and/or 조건2...;
+select 속성1, 속성2,... from 테이블명 (where 조건절);
+
+데이터 수정
+update 테이블명 set 속성1='값',속성2='값',... where  조건;
+
+데이터 삭제
+delete from 테이블명 where 속성1='값' and/or 속성2='값'....;
+
+데이터 전체 삭제(테이블안에 컬럼 모두삭제)
+truncate 테이블명;
+
+사용자 계정 추가
+insert into mysql.user(host,user,password,ssl_cipher,x509_issuer,x509_subject,authentication_string) 
+values ('localhost','계정이름',password('비밀번호'),"","","","");
+
+계정에 데이터베이스 권한 부여
+insert into mysql.db values('호스트명','DB명','계정이름','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y');
+grant all privileges on DB명.테이블명(or *) to '계정이름'@'호스트명' identified by '암호';
+grant all privileges on *.* to '계정이름'@'호스트명' identified by '암호';
+
+변경 내용 저장
+flush privileges;
+
+계정 비밀번호 변경
+update user set password=password('바꿀 비번') where user='계정 이름';
+
+ASC : 오름차순
+DESC : 내림차순
+ORDER BY 명령어를 사용하여 정렬 조건 입력
+ORDER BY id DESC; 이런방식

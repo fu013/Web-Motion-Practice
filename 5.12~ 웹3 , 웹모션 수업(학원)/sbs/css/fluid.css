@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+h1, h2 {
+    margin: 100px 0;
+    text-align: center;
+}
+
+/* 기본 공식 */
+.basic .wrap {
+    width: 80%; /* 960px */
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
+.basic .container {
+    width: 93.75%; /* 900px */
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.basic .container:after {
+    content: ""; display: block; clear: both;
+}
+
+.basic .container div {
+    float: left;
+}
+
+.basic .container div:first-child {
+    width: 33.333%; /* 300px */
+    background: silver;
+}
+
+.basic .container div:last-child {
+    width: 66.667%; /* 600px */
+    background: black;
+    color: silver;
+}
+
+
+
+/* 가변 마진 */
+.margin .wrap {
+    width: 80%; /* 960px */
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
+.margin .wrap:after {
+    content: ""; display: block; clear: both;
+}
+
+.margin .wrap div {
+    float: left;
+}
+
+.margin .wrap div:first-child {
+    width: 31.25%; /*300px*/
+    background-color: cadetblue;
+    margin-right: 37.5%; /*360px*/
+}
+
+.margin .wrap div:last-child {
+    width: 31.25%; /*300px*/
+    background-color: crimson;
+}

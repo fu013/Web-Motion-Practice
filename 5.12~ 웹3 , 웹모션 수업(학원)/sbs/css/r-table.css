@@ -1,0 +1,64 @@
+/*table > thead > tr > th[scope="col"]*5^^ + tbody > tr*3 > td*5*/
+@charset "utf=8";
+* {box-sizing: border-box;}
+
+
+/*table 요소*/
+table { border-collapse: collapse; }
+th, td {
+	padding: 10px 20px; border: 1px solid #ccc;
+}
+th {
+	background: #333;
+	color: #fff; font-weight: normal;
+	text-align: left; 
+}
+
+@media screen and (max-width: 599px) {
+	table, thead, tbody, tr, th, td {
+		display: block;
+	}
+	thead {
+		position: absolute; top: -9999px; left: -9999px;
+	}
+	td:before {
+		display: block;
+		margin-bottom: 5px;
+		color: #666; font-size: .8em;
+	}
+	tr:nth-child(odd) { background: #eee; }
+	td:nth-child(1):before {content: "이름 : ";}
+	td:nth-child(2):before {content: "성별 : ";}
+	td:nth-child(3):before {content: "직종 : ";}
+	td:nth-child(4):before {content: "색상 : ";}
+	td:nth-child(5):before {content: "취미 : ";}
+}
+
+/* div 요소 */
+.table { display: table; border-top: 1px solid #ccc; border-left: 1px solid #ccc;}
+.table-head { display: table-header-group; }
+.row { display: table-row; }
+.cell { display: table-cell;
+	padding: 10px 20px;
+        border-bottom: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+ }
+ .table-head .cell {
+ 	background: #333; color: #fff;
+ }
+ @media screen and (max-width: 599px) {
+ 	.table, .table-head, .row, .cell {
+ 		display: block;
+ 	}
+ 	.table-head {
+ 		position: absolute; top: -9999px; left: -9999px;
+ 	}
+ 	.cell:before {
+ 		content: attr(data-label);
+ 		display: block;
+ 		margin-bottom: 5px;
+ 		color: #666; font-size: .8em;
+ 	}
+ 	.row:nth-child(even) { background: #eee; }
+ 	/*부모기준 두번째 자식이므로 even을 해야함*/
+ }
